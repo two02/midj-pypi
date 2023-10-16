@@ -4,8 +4,8 @@ setup(
     name='midjpy',
     version='1.0.0',
     description='Python client for the MIDJ API',
-    author='Your Name',
-    author_email='your.email@example.com',
+    author='dmaxxy',
+    author_email='dmaxxy.bhw@gmail.com',
     packages=['midjpy'],
     install_requires=['requests'],
 )
