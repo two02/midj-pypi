@@ -34,7 +34,9 @@ midj = MIDJ(authorization='YOUR_AUTHORIZATION_TOKEN')
 
 ### Methods
 
-#### `generate(prompt)`
+#### For Subscription Users
+
+##### `generate(prompt)`
 
 Generate content based on a provided prompt:
 
@@ -43,7 +45,7 @@ response = midj.generate('Hello, world!')
 print(response)
 ```
 
-#### `generate_variation(index, trigger_id, msg_hash)`
+##### `generate_variation(index, trigger_id, msg_hash)`
 
 Generate a variation of content:
 
@@ -52,7 +54,7 @@ response = midj.generate_variation(1, 'trigger_id_here', 'msg_hash_here')
 print(response)
 ```
 
-#### `upscale_image(index, trigger_id, msg_hash)`
+##### `upscale_image(index, trigger_id, msg_hash)`
 
 Upscale an image:
 
@@ -61,7 +63,38 @@ response = midj.upscale_image(1, 'trigger_id_here', 'msg_hash_here')
 print(response)
 ```
 
-#### `get_by_trigger(trigger_id)`
+#### For Pre-paid Users
+
+##### `pregenerate(prompt)`
+
+Generate content based on a provided prompt:
+
+```python
+response = midj.pregenerate('Hello, world!')
+print(response)
+```
+
+##### `pregenerate_variation(index, trigger_id, msg_hash)`
+
+Generate a variation of content:
+
+```python
+response = midj.pregenerate_variation(1, 'trigger_id_here', 'msg_hash_here')
+print(response)
+```
+
+##### `preupscale_image(index, trigger_id, msg_hash)`
+
+Upscale an image:
+
+```python
+response = midj.preupscale_image(1, 'trigger_id_here', 'msg_hash_here')
+print(response)
+```
+
+#### Common API
+
+##### `get_by_trigger(trigger_id)`
 
 Fetch generated content by its trigger ID:
 
@@ -101,6 +134,5 @@ else:
 ## Contributing
 
 For any bugs or feature requests, please open an issue on GitHub.
-```
 
 Please replace `'YOUR_AUTHORIZATION_TOKEN'` with your actual MIDJ API authorization token.
